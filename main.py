@@ -68,14 +68,7 @@ async def run():
     context = await my_browser.new_context(False)
     page = await my_browser.new_page(context)
     print('初始化浏览器页面完成')
-    # page.on("response", filter_response)
-    async with page.expect_response("https://blackhole-m.m.jd.com/getinfo") as response_info:
-        print('url等待')
-        await page.goto(
-            "https://wq.jd.com/passport/Login?returnurl=//home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&")
-        # await page.click("input")
-    response = await response_info.value
-    print(await response.text())
+    await page.goto("https://wq.jd.com/passport/Login?returnurl=//home.m.jd.com/myJd/newhome.action?sceneval=2&ufc=&")
     phone = input('请输入要登陆的手机号: ')
     await page.fill(Config.phone_input, phone)
     await page.click(Config.policy_checkbox)
