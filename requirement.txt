@@ -1,0 +1,12 @@
+ddddocr==1.4.2
+flatbuffers==2.0
+greenlet==1.1.2
+numpy==1.22.1
+onnxruntime==1.10.0
+opencv-python==4.5.5.62
+Pillow==9.0.0
+playwright==1.18.1
+protobuf==3.19.3
+pyee==9.0.3
+typing-extensions==4.0.1
+websockets==10.1
